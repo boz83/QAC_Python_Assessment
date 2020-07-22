@@ -145,7 +145,6 @@ def four(arg1):
 
   numbers=[]
   for i in number_string:
-
     numbers2=list(i)
     sum=0
 
@@ -181,7 +180,20 @@ def four(arg1):
 	# help(str) and help(list), you might also need to use a function that can create a list of numbers for you, try help(range).
 
 def five(input):
-	return []
+  is_encrypted=[]
+  encrypted_names=[]
+  log_csv = input.split(",")
+
+  for i in range(len(log_csv)):
+    if(log_csv[i]=="False"):
+      is_encrypted.append(log_csv[i-2])
+
+  for n in is_encrypted:
+    if n not in is_encrypted:
+      encrypted_names.append(n)
+
+  return encrypted_names #  NOT WORKING 
+
 
 	# <QUESTION 6>
 
